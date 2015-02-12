@@ -1,0 +1,1 @@
+            <input ng-model="archive.filterDocType" placeholder="Publication Type" title="Publication Type" />

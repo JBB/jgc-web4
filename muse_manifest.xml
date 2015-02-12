@@ -1,0 +1,140 @@
+<manifest alg="2" build="10" opt="true" iceEnabled="true" iceMarkupVersion="2" exportTarget="other" resolutions="1x" timestamp="1421901335871">
+  <folder name="css">
+    <file name="site_global.css" crc="153774624"/>
+    <file name="master_lower-level-master.css" crc="12623310" ref="news:youth-leadership-development:partners:projects:contact-us:youth-sector-research-and-capacity-building:news,-events,-and-commentary:individual-perspectives-example:publications-and-videos:about-john-w.-gardner:projects-and-partners:interdisciplinary-team:what-we-do:individual-news-story-example:who-we-are:staff-page-example-copy:newsletters:videos-list:perspectives:publications-list:individual-publication-page:events"/>
+    <file name="master_home-master.css" crc="218730929" ref="index"/>
+    <file name="youth-leadership-link.css" crc="4140313868" ref="youth-leadership-link"/>
+    <file name="news.css" crc="4156582822" ref="news"/>
+    <file name="iefonts_news.css" crc="4169288776" ref="news"/>
+    <file name="partner-exterior-link.css" crc="109081822" ref="partner-exterior-link"/>
+    <file name="youth-leadership-development.css" crc="3842229453" ref="youth-leadership-development"/>
+    <file name="iefonts_youth-leadership-development.css" crc="191613484" ref="youth-leadership-development"/>
+    <file name="partners.css" crc="4209495399" ref="partners"/>
+    <file name="iefonts_partners.css" crc="3992806247" ref="partners"/>
+    <file name="index.css" crc="4207741714" ref="index"/>
+    <file name="projects.css" crc="447359315" ref="projects"/>
+    <file name="iefonts_projects.css" crc="124660943" ref="projects"/>
+    <file name="youth-sector-research-link.css" crc="224063869" ref="youth-sector-research-link"/>
+    <file name="contact-us.css" crc="4135607913" ref="contact-us"/>
+    <file name="iefonts_contact-us.css" crc="4005673460" ref="contact-us"/>
+    <file name="youth-sector-research-and-capacity-building.css" crc="488533967" ref="youth-sector-research-and-capacity-building"/>
+    <file name="iefonts_youth-sector-research-and-capacity-building.css" crc="4237266861" ref="youth-sector-research-and-capacity-building"/>
+    <file name="news_-events_-and-commentary.css" crc="3759065021" ref="news,-events,-and-commentary"/>
+    <file name="iefonts_news_-events_-and-commentary.css" crc="3837427270" ref="news,-events,-and-commentary"/>
+    <file name="individual-perspectives-example.css" crc="4151680325" ref="individual-perspectives-example"/>
+    <file name="iefonts_individual-perspectives-example.css" crc="4048147098" ref="individual-perspectives-example"/>
+    <file name="publications-and-videos.css" crc="291491910" ref="publications-and-videos"/>
+    <file name="iefonts_publications-and-videos.css" crc="164121051" ref="publications-and-videos"/>
+    <file name="individual-event-link.css" crc="3875072124" ref="individual-event-link"/>
+    <file name="about-john-w_-gardner.css" crc="344309049" ref="about-john-w.-gardner"/>
+    <file name="iefonts_about-john-w_-gardner.css" crc="4227031950" ref="about-john-w.-gardner"/>
+    <file name="projects-and-partners.css" crc="3836489322" ref="projects-and-partners"/>
+    <file name="iefonts_projects-and-partners.css" crc="515926564" ref="projects-and-partners"/>
+    <file name="individual-newsletter-link.css" crc="331839330" ref="individual-newsletter-link"/>
+    <file name="interdisciplinary-team.css" crc="114623747" ref="interdisciplinary-team"/>
+    <file name="iefonts_interdisciplinary-team.css" crc="4062850284" ref="interdisciplinary-team"/>
+    <file name="what-we-do.css" crc="50902997" ref="what-we-do"/>
+    <file name="iefonts_what-we-do.css" crc="4255509993" ref="what-we-do"/>
+    <file name="individual-news-story-example.css" crc="4096501705" ref="individual-news-story-example"/>
+    <file name="iefonts_individual-news-story-example.css" crc="446152048" ref="individual-news-story-example"/>
+    <file name="who-we-are.css" crc="315819572" ref="who-we-are"/>
+    <file name="iefonts_who-we-are.css" crc="4216343637" ref="who-we-are"/>
+    <file name="staff-page-example-copy.css" crc="4218682537" ref="staff-page-example-copy"/>
+    <file name="newsletters.css" crc="111015217" ref="newsletters"/>
+    <file name="iefonts_newsletters.css" crc="369503365" ref="newsletters"/>
+    <file name="videos-list.css" crc="521057078" ref="videos-list"/>
+    <file name="iefonts_videos-list.css" crc="112840928" ref="videos-list"/>
+    <file name="perspectives.css" crc="433682565" ref="perspectives"/>
+    <file name="iefonts_perspectives.css" crc="101465622" ref="perspectives"/>
+    <file name="publications-list.css" crc="3851239162" ref="publications-list"/>
+    <file name="iefonts_publications-list.css" crc="3825907607" ref="publications-list"/>
+    <file name="individual-publication-page.css" crc="4165327865" ref="individual-publication-page"/>
+    <file name="iefonts_individual-publication-page.css" crc="76080839" ref="individual-publication-page"/>
+    <file name="events.css" crc="4125307376" ref="events"/>
+    <file name="iefonts_events.css" crc="101646409" ref="events"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="4164521501" ref="index:who-we-are:interdisciplinary-team:about-john-w.-gardner:what-we-do:projects-and-partners:projects:partners:partner-exterior-link:publications-and-videos:publications-list:videos-list:staff-page-example-copy:news,-events,-and-commentary:contact-us:youth-sector-research-and-capacity-building:youth-leadership-development:news:events:perspectives:newsletters:individual-news-story-example:individual-newsletter-link:individual-event-link:individual-perspectives-example:youth-sector-research-link:youth-leadership-link:individual-publication-page"/>
+    <file name="museutils.js" crc="3777594392" ref="index:who-we-are:interdisciplinary-team:about-john-w.-gardner:what-we-do:projects-and-partners:projects:partners:partner-exterior-link:publications-and-videos:publications-list:videos-list:staff-page-example-copy:news,-events,-and-commentary:contact-us:youth-sector-research-and-capacity-building:youth-leadership-development:news:events:perspectives:newsletters:individual-news-story-example:individual-newsletter-link:individual-event-link:individual-perspectives-example:youth-sector-research-link:youth-leadership-link:individual-publication-page"/>
+    <file name="pie.js" crc="3827607177" ref="index"/>
+    <file name="jquery.musemenu.js" crc="415733523" ref="index:who-we-are:interdisciplinary-team:about-john-w.-gardner:what-we-do:projects-and-partners:projects:partners:publications-and-videos:publications-list:videos-list:staff-page-example-copy:news,-events,-and-commentary:contact-us:youth-sector-research-and-capacity-building:youth-leadership-development:news:events:perspectives:newsletters:individual-news-story-example:individual-perspectives-example:individual-publication-page"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index:who-we-are:interdisciplinary-team:about-john-w.-gardner:what-we-do:projects-and-partners:projects:partners:partner-exterior-link:publications-and-videos:publications-list:videos-list:staff-page-example-copy:news,-events,-and-commentary:contact-us:youth-sector-research-and-capacity-building:youth-leadership-development:news:events:perspectives:newsletters:individual-news-story-example:individual-newsletter-link:individual-event-link:individual-perspectives-example:youth-sector-research-link:youth-leadership-link:individual-publication-page"/>
+    <file name="webpro.js" crc="474087315" ref="publications-and-videos:publications-list:contact-us"/>
+    <file name="form_check.php" crc="306825315" ref="publications-and-videos:publications-list:contact-us"/>
+    <file name="form_throttle.php" crc="4293816517" ref="publications-and-videos:publications-list:contact-us"/>
+    <file name="form_process.php" crc="109188895" ref="publications-and-videos:publications-list:contact-us"/>
+    <file name="form-u12268.php" crc="326135725" ref="publications-and-videos"/>
+    <file name="form-u12309.php" crc="4096471961" ref="publications-list"/>
+    <file name="form-u12288.php" crc="474200899" ref="contact-us"/>
+  </folder>
+  <folder name="images">
+    <file name="favicon.ico" crc="218918666" ref="index"/>
+    <file name="school-of-ed-logo.gif" crc="4176840870" ref="index:who-we-are:interdisciplinary-team:about-john-w.-gardner:what-we-do:projects-and-partners:projects:partners:publications-and-videos:publications-list:videos-list:staff-page-example-copy:news,-events,-and-commentary:contact-us:youth-sector-research-and-capacity-building:youth-leadership-development:news:events:perspectives:newsletters:individual-news-story-example:individual-perspectives-example:individual-publication-page"/>
+    <file name="jgc-logo.gif" crc="266119656" ref="index:who-we-are:interdisciplinary-team:about-john-w.-gardner:what-we-do:projects-and-partners:projects:partners:publications-and-videos:publications-list:videos-list:staff-page-example-copy:news,-events,-and-commentary:contact-us:youth-sector-research-and-capacity-building:youth-leadership-development:news:events:perspectives:newsletters:individual-news-story-example:individual-perspectives-example:individual-publication-page"/>
+    <file name="search box-crop-u12040.png" crc="356278046" ref="index"/>
+    <file name="fromdatatoaction.gif" crc="158311594" ref="index"/>
+    <file name="brochure-cover.jpg" crc="219184329" ref="index"/>
+    <file name="jorge-signature-jj2.png" crc="317634154" ref="index"/>
+    <file name="graciela-crop-u12175.jpg" crc="378815459" ref="index"/>
+    <file name="follow-from-web.jpg" crc="502877675" ref="index"/>
+    <file name="red-circle.png" crc="4071562726" ref="index"/>
+    <file name="facebook-icon.gif" crc="4103704455" ref="index:who-we-are:interdisciplinary-team:about-john-w.-gardner:what-we-do:projects-and-partners:projects:partners:publications-and-videos:publications-list:videos-list:staff-page-example-copy:news,-events,-and-commentary:contact-us:youth-sector-research-and-capacity-building:youth-leadership-development:news:events:perspectives:newsletters:individual-news-story-example:individual-perspectives-example:individual-publication-page"/>
+    <file name="twitter-icon.gif" crc="4076089704" ref="index:who-we-are:interdisciplinary-team:about-john-w.-gardner:what-we-do:projects-and-partners:projects:partners:publications-and-videos:publications-list:videos-list:staff-page-example-copy:news,-events,-and-commentary:contact-us:youth-sector-research-and-capacity-building:youth-leadership-development:news:events:perspectives:newsletters:individual-news-story-example:individual-perspectives-example:individual-publication-page"/>
+    <file name="youtube-icon.gif" crc="3853371281" ref="index:who-we-are:interdisciplinary-team:about-john-w.-gardner:what-we-do:projects-and-partners:projects:partners:publications-and-videos:publications-list:videos-list:staff-page-example-copy:news,-events,-and-commentary:contact-us:youth-sector-research-and-capacity-building:youth-leadership-development:news:events:perspectives:newsletters:individual-news-story-example:individual-perspectives-example:individual-publication-page"/>
+    <file name="search box-crop-u10652.png" crc="356278046" ref="who-we-are:interdisciplinary-team:about-john-w.-gardner:what-we-do:projects-and-partners:projects:partners:publications-and-videos:publications-list:videos-list:staff-page-example-copy:news,-events,-and-commentary:contact-us:youth-sector-research-and-capacity-building:youth-leadership-development:news:events:perspectives:newsletters:individual-news-story-example:individual-perspectives-example:individual-publication-page"/>
+    <file name="prudence-amy-retouch-flat2.jpg" crc="4160235005" ref="who-we-are"/>
+    <file name="jwg_watch-retouch2-web-small.jpg" crc="401286963" ref="who-we-are"/>
+    <file name="jwg-1-web2.jpg" crc="494526013" ref="about-john-w.-gardner"/>
+    <file name="mp900448524-revis-web.jpg" crc="4071238228" ref="what-we-do"/>
+    <file name="screen shot-crop-u11817.jpg" crc="4179921578" ref="what-we-do"/>
+    <file name="12.jpg" crc="4205649232" ref="projects-and-partners"/>
+    <file name="10.jpg" crc="4289183045" ref="publications-and-videos"/>
+    <file name="u12269-21.png" crc="211452458" ref="publications-and-videos"/>
+    <file name="u12269-21-r.png" crc="48189946" ref="publications-and-videos"/>
+    <file name="u12269-21-m.png" crc="3954235789" ref="publications-and-videos"/>
+    <file name="u12269-21-fs.png" crc="4212900407" ref="publications-and-videos"/>
+    <file name="u12320-21.png" crc="211452458" ref="publications-list"/>
+    <file name="u12320-21-r.png" crc="48189946" ref="publications-list"/>
+    <file name="u12320-21-m.png" crc="3954235789" ref="publications-list"/>
+    <file name="u12320-21-fs.png" crc="4212900407" ref="publications-list"/>
+    <file name="nancy_resized-web.jpg" crc="43075092" ref="staff-page-example-copy"/>
+    <file name="5.jpg" crc="4180647449" ref="news,-events,-and-commentary"/>
+    <file name="2.jpg" crc="4044302756" ref="contact-us"/>
+    <file name="u12304-21.png" crc="211452458" ref="contact-us"/>
+    <file name="u12304-21-r.png" crc="48189946" ref="contact-us"/>
+    <file name="u12304-21-m.png" crc="3954235789" ref="contact-us"/>
+    <file name="u12304-21-fs.png" crc="4212900407" ref="contact-us"/>
+    <file name="screen shot 2014-12-15 at dec 15, 14, 82721 pm.jpg" crc="4194969053" ref="individual-news-story-example"/>
+    <file name="mary-low-res.jpg" crc="212715015" ref="individual-perspectives-example"/>
+    <file name="cover1c_web.png" crc="492778212" ref="individual-publication-page"/>
+    <file name="tumblr_inline_mt06fn4sya1qz4rgp-crop-u11905.png" crc="4063211163" ref="individual-publication-page"/>
+  </folder>
+  <file name="index.html" crc="510630205" mt="1421885957410" redirect="true"/>
+  <file name="who-we-are.html" crc="452331105" mt="1421885974197" redirect="true"/>
+  <file name="interdisciplinary-team.html" crc="24393191" mt="1421885974198" redirect="true"/>
+  <file name="about-john-w.-gardner.html" crc="3956714695" mt="1421885974198" redirect="true"/>
+  <file name="what-we-do.html" crc="4065931494" mt="1421885974199" redirect="true"/>
+  <file name="projects-and-partners.html" crc="3827583117" mt="1421885974199" redirect="true"/>
+  <file name="projects.html" crc="3935705627" mt="1421885974199" redirect="true"/>
+  <file name="partners.html" crc="4047439950" mt="1421885974200" redirect="true"/>
+  <file name="partner-exterior-link.html" crc="3996540892" mt="1421113411300" redirect="true"/>
+  <file name="publications-and-videos.html" crc="4217330193" mt="1421887606029" redirect="true"/>
+  <file name="publications-list.html" crc="3876568345" mt="1421887312492" redirect="true"/>
+  <file name="videos-list.html" crc="4067993678" mt="1421885974201" redirect="true"/>
+  <file name="staff-page-example-copy.html" crc="4077040233" mt="1421885974202" redirect="true"/>
+  <file name="news,-events,-and-commentary.html" crc="163090676" mt="1421885974202" redirect="true"/>
+  <file name="contact-us.html" crc="447004777" mt="1421887574828" redirect="true"/>
+  <file name="youth-sector-research-and-capacity-building.html" crc="63605615" mt="1421885974203" redirect="true"/>
+  <file name="youth-leadership-development.html" crc="3762588966" mt="1421885974203" redirect="true"/>
+  <file name="news.html" crc="4015772304" mt="1421885974204" redirect="true"/>
+  <file name="events.html" crc="3849008427" mt="1421885974204" redirect="true"/>
+  <file name="perspectives.html" crc="477951200" mt="1421885974204" redirect="true"/>
+  <file name="newsletters.html" crc="120954476" mt="1421885974205" redirect="true"/>
+  <file name="individual-news-story-example.html" crc="3900314044" mt="1421885974205" redirect="true"/>
+  <file name="individual-newsletter-link.html" crc="480563203" mt="1421113411310" redirect="true"/>
+  <file name="individual-event-link.html" crc="3878555010" mt="1421113411310" redirect="true"/>
+  <file name="individual-perspectives-example.html" crc="311974948" mt="1421885974206" redirect="true"/>
+  <file name="youth-sector-research-link.html" crc="254387439" mt="1421113411312" redirect="true"/>
+  <file name="youth-leadership-link.html" crc="3777105573" mt="1421113411312" redirect="true"/>
+  <file name="individual-publication-page.html" crc="509230523" mt="1421885974206" redirect="true"/>
+</manifest>

@@ -1,0 +1,63 @@
+.version.individual_event_link /* version checker */
+{
+	color: #0000E6;
+	background-color: #F8E87C;
+}
+
+.html
+{
+	background-color: #7F7F7F;
+}
+
+#page
+{
+	z-index: 1;
+	width: 660px;
+	min-height: 212px;
+	background-image: none;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000000;
+	background-color: #FFFFFF;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -1px;
+	padding: 187px 180px 406px 480px;
+}
+
+#u11714-15
+{
+	z-index: 8;
+	width: 507px;
+	min-height: 30px;
+	background-color: #FFFFFF;
+	line-height: 0.8;
+	font-size: 9px;
+	text-align: left;
+	font-family: Verdana, Tahoma, Geneva, sans-serif;
+	position: relative;
+}
+
+#u11715-6
+{
+	z-index: 2;
+	width: 660px;
+	min-height: 45px;
+	background-color: transparent;
+	line-height: 1.1;
+	font-size: 42px;
+	color: #666666;
+	letter-spacing: -1px;
+	text-align: left;
+	font-family: open-sans, sans-serif;
+	font-weight: 300;
+	margin-top: 37px;
+	position: relative;
+}
+
+body
+{
+	position: relative;
+	min-width: 1322px;
+}
+
