@@ -4,7 +4,7 @@
   app.controller('ArchiveController', ['$http', function($http){
      var archive = this;
      archive.publications = [ ];
-     $http.get('/jgc-web3/publications.json').success(function(data){
+     $http.get('/jgc-web4/publications.json').success(function(data){
        archive.publications = data;
      });
     this.publications = archive.publications;
@@ -16,6 +16,7 @@
     this.showByDocType = 0;
     this.showByKeywords = 0;
     this.showByYearAndDocType = 0;
+    this.showByYearAndKeyword = 0;
 
     //Need to account for combo searches like year + author
     //Also need to show only one result pane at a time
@@ -26,28 +27,39 @@
     //Perhaps have default sort action be by popularity
     //should have things sorted by year DSC
     this.search = function(){
-      if ((this.filterYear > 1990) && (this.filterDocType)){
+      if ((this.filterYear > 1990) && (this.filterKeywords)){
+        this.showByYearAndKeyword = 1;
+        this.showByYearAndDocType = 0;
+        this.showByYear = 0;
+        this.showByDocType = 0;
+        this.showByKeywords = 0;
+      }
+      else if ((this.filterYear > 1990) && (this.filterDocType)){
+        this.showByYearAndKeyword = 0;
         this.showByYearAndDocType = 1;
-        this.showByYear = "";
-        this.showByDocType = "";
-        this.showByKeywords = "";
+        this.showByYear = 0;
+        this.showByDocType = 0;
+        this.showByKeywords = 0;
       }
       else if ((this.filterYear > 1990) && (this.filterYear < 2020)){
+        this.showByYearAndKeyword = 0;
         this.showByYearAndDocType = 0;
         this.showByYear = 1;
-        this.showByDocType = "";
-        this.showByKeywords = "";
+        this.showByDocType = 0;
+        this.showByKeywords = 0;
       }
       else if (this.filterDocType){
+        this.showByYearAndKeyword = 0;
         this.showByYearAndDocType = 0;
-        this.showByYear = "";
+        this.showByYear = 0;
         this.showByDocType = 1;
-        this.showByKeywords = "";
+        this.showByKeywords = 0;
       }
       else if (this.filterKeywords){
+        this.showByYearAndKeyword = 0;
         this.showByYearAndDocType = 0;
-        this.showByYear = "";
-        this.showByDocType = "";
+        this.showByYear = 0;
+        this.showByDocType = 0;
         this.showByKeywords = 1;
       }
     };

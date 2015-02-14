@@ -130,10 +130,21 @@ var __adobewebfontsappname__ = "muse";
       <h2 class="text-center">An Angular archive</h2>
     </header>
    
+    <div ng-show="archive.showByYearAndKeyword === 1">   
+      <ul>
+        <h4>Publications by year and keywords</h4>
+        <li ng-repeat="publication in archive.publications | filter:{year:archive.filterYear,keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
+          <blockquote>
+            <strong>{{publication.year}} </strong>
+            {{publication.description}}
+            <cite class="clearfix">-{{publication.author}}</cite>
+          </blockquote>
+        </li>
+      </ul>
+    </div>
     <div ng-show="archive.showByYearAndDocType === 1">   
       <ul>
         <h4>Publications by year and type</h4>
-      <!--  <li ng-repeat="publication in archive.publications | orderBy:'-year' | limitTo:2">-->
         <li ng-repeat="publication in archive.publications | filter:{year:archive.filterYear,docType:archive.filterDocType} | orderBy:'-year' | limitTo:3">
           <blockquote>
             <strong>{{publication.year}} </strong>
@@ -206,6 +217,7 @@ var __adobewebfontsappname__ = "muse";
           <!--  Live Preview -->
           <blockquote>
             <strong>
+              &nbsp;<br>
               {{archive.filterYear}} <br>
               {{archive.filterKeywords}} <br>
               {{archive.filterDocType}} <br>
@@ -213,19 +225,19 @@ var __adobewebfontsappname__ = "muse";
           </blockquote>
 
           <!--  Filter Form -->
-          <h4>Submit a Review</h4>
+          <h4>&nbsp;</h4>
           <fieldset>
             <select ng-model="archive.filterYear" ng-options="years for years in [2014,2013,2012,2011,2010,2009,2008,2007]" title="Years">
-              <option value>Search by Year</option>
+              <option value>Any Year</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <select ng-model="archive.filterDocType" ng-options="docTypes for docTypes in ['Article','Issue Brief','Report','Video']" title="Publications">
+              <option value>Any Publication Type</option>
             </select>
           </fieldset>
           <fieldset>
             <input ng-model="archive.filterKeywords" placeholder="Keywords" title="Keywords" />
-          </fieldset>
-          <fieldset>
-            <select ng-model="archive.filterDocType" ng-options="docTypes for docTypes in ['Article','Issue Brief','Report','Video']" title="Publications">
-              <option value>By Publication Type</option>
-            </select>
           </fieldset>
           <fieldset>
             <input type="submit" value="Search" />
