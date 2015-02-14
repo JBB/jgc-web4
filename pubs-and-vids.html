@@ -130,11 +130,23 @@ var __adobewebfontsappname__ = "muse";
       <h2 class="text-center">An Angular archive</h2>
     </header>
    
+    <div ng-show="archive.showByYearAndDocType === 1">   
+      <ul>
+        <h4>Publications by year and type</h4>
+      <!--  <li ng-repeat="publication in archive.publications | orderBy:'-year' | limitTo:2">-->
+        <li ng-repeat="publication in archive.publications | filter:{year:archive.filterYear,docType:archive.filterDocType} | orderBy:'-year' | limitTo:3">
+          <blockquote>
+            <strong>{{publication.year}} </strong>
+            {{publication.description}}
+            <cite class="clearfix">-{{publication.author}}</cite>
+          </blockquote>
+        </li>
+      </ul>
+    </div>
     <div ng-show="archive.showByYear === 1">   
       <ul>
-        <h4>Publications</h4>
-      <!--  <li ng-repeat="publication in archive.publications | orderBy:'-year' | limitTo:2">-->
-        <li ng-repeat="publication in archive.publications | filter:archive.filterYear | limitTo:3">
+        <h4>Publications by year</h4>
+        <li ng-repeat="publication in archive.publications | filter:archive.filterYear | orderBy:'-year' | limitTo:3">
           <blockquote>
             <strong>{{publication.year}} </strong>
             {{publication.description}}
@@ -145,7 +157,7 @@ var __adobewebfontsappname__ = "muse";
     </div>
     <div ng-show="archive.showByDocType === 1">   
       <ul>
-        <h4>Publications</h4>
+        <h4>Publications by type</h4>
         <li ng-repeat="publication in archive.publications | filter:archive.filterDocType | limitTo:3">
           <blockquote>
             <strong>{{publication.year}} </strong>
@@ -157,7 +169,7 @@ var __adobewebfontsappname__ = "muse";
     </div>
     <div ng-show="archive.showByKeywords === 1">   
       <ul>
-        <h4>Publications</h4>
+        <h4>Publications by keyword</h4>
         <li ng-repeat="publication in archive.publications | filter:archive.filterKeywords | limitTo:3">
           <blockquote>
             <strong>{{publication.year}} </strong>
@@ -194,9 +206,9 @@ var __adobewebfontsappname__ = "muse";
           <!--  Live Preview -->
           <blockquote>
             <strong>
-            {{filterCtrl.year}}<br>
-            {{filterCtrl.keywords}} <br>
-            {{filterCtrl.docType}}
+              {{archive.filterYear}} <br>
+              {{archive.filterKeywords}} <br>
+              {{archive.filterDocType}} <br>
             </strong>
           </blockquote>
 

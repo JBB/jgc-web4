@@ -8,13 +8,14 @@
        archive.publications = data;
      });
     this.publications = archive.publications;
-    this.filterYear = "all";
+    this.filterYear = "";
     this.filterAuthor = "";
     this.filterKeywords = "";
     this.filterDocType = "";
-    this.showByYear = 0;
+    this.showByYear = 1;
     this.showByDocType = 0;
     this.showByKeywords = 0;
+    this.showByYearAndDocType = 0;
 
     //Need to account for combo searches like year + author
     //Also need to show only one result pane at a time
@@ -23,20 +24,30 @@
     //keep publications in a separate json file
     //keep track of views by publication in that file (popularity)
     //Perhaps have default sort action be by popularity
+    //should have things sorted by year DSC
     this.search = function(){
-      if ((this.filterYear > 1990) && (this.filterYear < 2020)){
+      if ((this.filterYear > 1990) && (this.filterDocType)){
+        this.showByYearAndDocType = 1;
+        this.showByYear = "";
+        this.showByDocType = "";
+        this.showByKeywords = "";
+      }
+      else if ((this.filterYear > 1990) && (this.filterYear < 2020)){
+        this.showByYearAndDocType = 0;
         this.showByYear = 1;
-        this.showByDocType = 0;
-        this.showByKeywords = 0;
+        this.showByDocType = "";
+        this.showByKeywords = "";
       }
-      if (this.filterDocType){
-        this.showByYear = 0;
+      else if (this.filterDocType){
+        this.showByYearAndDocType = 0;
+        this.showByYear = "";
         this.showByDocType = 1;
-        this.showByKeywords = 0;
+        this.showByKeywords = "";
       }
-      if (this.filterKeywords){
-        this.showByYear = 0;
-        this.showByDocType = 0;
+      else if (this.filterKeywords){
+        this.showByYearAndDocType = 0;
+        this.showByYear = "";
+        this.showByDocType = "";
         this.showByKeywords = 1;
       }
     };
