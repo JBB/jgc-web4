@@ -130,6 +130,30 @@ var __adobewebfontsappname__ = "muse";
       <h2 class="text-center">An Angular archive</h2>
     </header>
    
+    <div ng-show="archive.showByYearAndDocTypeAndKeyword === 1">   
+      <ul>
+        <h4>Publications by type and keywords</h4>
+        <li ng-repeat="publication in archive.publications | filter:{year:archive.filterYear,docType:archive.filterDocType,keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
+          <blockquote>
+            <strong>{{publication.year}} </strong>
+            {{publication.description}}
+            <cite class="clearfix">-{{publication.author}}</cite>
+          </blockquote>
+        </li>
+      </ul>
+    </div>
+    <div ng-show="archive.showByDocTypeAndKeyword === 1">   
+      <ul>
+        <h4>Publications by type and keywords</h4>
+        <li ng-repeat="publication in archive.publications | filter:{docType:archive.filterDocType,keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
+          <blockquote>
+            <strong>{{publication.year}} </strong>
+            {{publication.description}}
+            <cite class="clearfix">-{{publication.author}}</cite>
+          </blockquote>
+        </li>
+      </ul>
+    </div>
     <div ng-show="archive.showByYearAndKeyword === 1">   
       <ul>
         <h4>Publications by year and keywords</h4>

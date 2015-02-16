@@ -17,6 +17,8 @@
     this.showByKeywords = 0;
     this.showByYearAndDocType = 0;
     this.showByYearAndKeyword = 0;
+    this.showByDocTypeAndKeyword = 0;
+    this.showByYearAndDocTypeAndKeyword = 0;
 
     //Need to account for combo searches like year + author
     //Also need to show only one result pane at a time
@@ -27,7 +29,27 @@
     //Perhaps have default sort action be by popularity
     //should have things sorted by year DSC
     this.search = function(){
-      if ((this.filterYear > 1990) && (this.filterKeywords)){
+      if ((this.filterYear > 1990) && (this.filterDocType) && (this.filterKeywords)){
+        this.showByYearAndDocTypeAndKeyword = 1;
+        this.showByDocTypeAndKeyword = 0;
+        this.showByYearAndKeyword = 0;
+        this.showByYearAndDocType = 0;
+        this.showByYear = 0;
+        this.showByDocType = 0;
+        this.showByKeywords = 0;
+      }
+      else if ((this.filterDocType) && (this.filterKeywords)){
+        this.showByYearAndDocTypeAndKeyword = 0;
+        this.showByDocTypeAndKeyword = 1;
+        this.showByYearAndKeyword = 0;
+        this.showByYearAndDocType = 0;
+        this.showByYear = 0;
+        this.showByDocType = 0;
+        this.showByKeywords = 0;
+      }
+      else if ((this.filterYear > 1990) && (this.filterKeywords)){
+        this.showByYearAndDocTypeAndKeyword = 0;
+        this.showByDocTypeAndKeyword = 0;
         this.showByYearAndKeyword = 1;
         this.showByYearAndDocType = 0;
         this.showByYear = 0;
@@ -35,6 +57,8 @@
         this.showByKeywords = 0;
       }
       else if ((this.filterYear > 1990) && (this.filterDocType)){
+        this.showByYearAndDocTypeAndKeyword = 0;
+        this.showByDocTypeAndKeyword = 0;
         this.showByYearAndKeyword = 0;
         this.showByYearAndDocType = 1;
         this.showByYear = 0;
@@ -42,6 +66,8 @@
         this.showByKeywords = 0;
       }
       else if ((this.filterYear > 1990) && (this.filterYear < 2020)){
+        this.showByYearAndDocTypeAndKeyword = 0;
+        this.showByDocTypeAndKeyword = 0;
         this.showByYearAndKeyword = 0;
         this.showByYearAndDocType = 0;
         this.showByYear = 1;
@@ -49,6 +75,8 @@
         this.showByKeywords = 0;
       }
       else if (this.filterDocType){
+        this.showByYearAndDocTypeAndKeyword = 0;
+        this.showByDocTypeAndKeyword = 0;
         this.showByYearAndKeyword = 0;
         this.showByYearAndDocType = 0;
         this.showByYear = 0;
@@ -56,6 +84,8 @@
         this.showByKeywords = 0;
       }
       else if (this.filterKeywords){
+        this.showByYearAndDocTypeAndKeyword = 0;
+        this.showByDocTypeAndKeyword = 0;
         this.showByYearAndKeyword = 0;
         this.showByYearAndDocType = 0;
         this.showByYear = 0;
