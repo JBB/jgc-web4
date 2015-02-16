@@ -94,24 +94,33 @@ var __adobewebfontsappname__ = "muse";
     <div class="clearfix colelem" id="ppu11898-6"><!-- group -->
      <div class="clearfix grpelem" id="pu11898-6"><!-- column -->
       <div class="clearfix colelem" id="u11898-6"><!-- content -->
-       <p id="u11898-2">BROWSE THE</p>
+       <p id="u11898-2">FILTER THE</p>
        <p id="u11898-4">PUBLICATIONS ARCHIVE</p>
-
-
-      <div class="clip_frame colelem" id="u11845"><!-- image -->
-       <img class="block" id="u11845_img" src="images/10.jpg" alt="" width="350" height="388"/>
       </div>
-
-      <div class="clearfix colelem" id="u11430-19"><!-- content -->
-       <p id="u11430-2">____________________________________________________________________</p>
-       <p id="u11430-4">TITLE OF A FEATURED PUBLICATION</p>
-       <p id="u11430-5">&nbsp;</p>
-       <p id="u11430-8"><a class="nonblock" href="individual-publication-page.html"><span id="u11430-6">A Framework for Developing Success in Young Children</span></a></p>
-       <p id="u11430-10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-      </div>
-
-
-      </div>
+      <form class="form-grp clearfix colelem" id="widgetu12309" method="post" enctype="multipart/form-data" action="scripts/form-u12309.php"><!-- none box -->
+       <div class="fld-grp clearfix grpelem" id="widgetu12321" data-required="false"><!-- none box -->
+        <label class="fld-label actAsDiv clearfix grpelem" id="u12323-4" for="widgetu12321_input"><!-- content --><span class="actAsPara"><span id="u12323">Type of Publication:</span></span></label>
+        <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u12324-3"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu12321_input" name="custom_U12321" tabindex="1"/></span>
+       </div>
+       <div class="fld-grp clearfix grpelem" id="widgetu12316" data-required="true" data-type="email"><!-- none box -->
+        <label class="fld-label actAsDiv clearfix grpelem" id="u12319-4" for="widgetu12316_input"><!-- content --><span class="actAsPara">Year of Publication:</span></label>
+        <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u12317-3"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu12316_input" name="Email" tabindex="2"/></span>
+       </div>
+       <div class="clearfix grpelem" id="u12325-4"><!-- content -->
+        <p>Submitting Form...</p>
+       </div>
+       <div class="clearfix grpelem" id="u12314-4"><!-- content -->
+        <p>The server encountered an error.</p>
+       </div>
+       <div class="clearfix grpelem" id="u12315-4"><!-- content -->
+        <p>Form received.</p>
+       </div>
+       <input class="submit-btn NoWrap grpelem" id="u12320-21" type="submit" value="" tabindex="4"/><!-- state-based BG images -->
+       <div class="fld-grp clearfix grpelem" id="widgetu12310" data-required="false"><!-- none box -->
+        <label class="fld-label actAsDiv clearfix grpelem" id="u12313-4" for="widgetu12310_input"><!-- content --><span class="actAsPara"><span id="u12313">Title Keyword:</span></span></label>
+        <span class="fld-textarea actAsDiv clearfix grpelem" id="u12312-3"><!-- content --><textarea class="wrapped-input" id="widgetu12310_input" name="custom_U12310" tabindex="3"></textarea></span>
+       </div>
+      </form>
      </div>
      <div class="clearfix grpelem" id="pu10767-4"><!-- column -->
       <div class="Publications-Headline-Link clearfix colelem" id="u10767-4"><!-- content -->

@@ -1,1 +1,6 @@
-        <li ng-repeat="publication in archive.publications | filter: { year: archive.filterYear, docType: archive:filterDocType } | limitTo:3">
+      <div class="clearfix colelem" id="u11430-19"><!-- content -->
+       <p id="u11430-2">____________________________________________________________________</p>
+       <p id="u11430-4">PUBLICATIONS AND VIDEOS EXAMPLES</p>
+       <p id="u11430-5">&nbsp;</p>
+       <p id="u11430-8"><a class="nonblock" href="individual-publication-page.html"><span id="u11430-6">A Framework for Developing Success in Young Children</span></a></p>
+       <p id="u11430-10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>

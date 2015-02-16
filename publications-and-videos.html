@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html ng-app="pubStore" class="html" lang="en-US">
- <head>
-
-  <script type="text/javascript" src="js/angular.min.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
+<html ng-app="pubStore">
+  <head>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 
   <script type="text/javascript">
    if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["jquery-1.8.3.min.js", "museutils.js", "jquery.musemenu.js", "webpro.js", "publications-and-videos.css"], "outOfDate":[]};
@@ -91,6 +90,9 @@ var __adobewebfontsappname__ = "muse";
       </div>
      </nav>
     </div>
+
+
+
     <div class="clearfix colelem" id="u10764-8"><!-- content -->
      <p><a class="nonblock" href="index.html">Home</a> <span id="u10764-4">&nbsp;&nbsp; </span><span id="u10764-5">&gt; Publications and Videos</span></p>
     </div>
@@ -119,90 +121,159 @@ var __adobewebfontsappname__ = "muse";
        <p id="u11015-3"><a class="nonblock" href="publications-list.html">&gt; Browse Publications</a></p>
        <p id="u11015-4">&nbsp;</p>
        <p id="u11015-7"><a class="nonblock" href="videos-list.html">&gt; Browse Videos</a></p>
-      </div>
-
-     
-      <div ng-show="archive.showByType === 1" class="clearfix colelem" id="u11009-11"><!-- content -->
-      Type: {{archive.filterType}} <br><br>
-        <a class="nonblock" href="publications-list.html">Publications</a>
-        
-      <!--  <li ng-repeat="publication in archive.publications | orderBy:'-year' | limitTo:2">-->
-        <p ng-repeat="publication in archive.publications | filter:archive.filterType | limitTo:5">
+    <!--  Store Header  -->
+    <!--JBB contain this all in a div for now-->
+    <header>
+      <h1 class="text-center">Research Publications</h1>
+      <h2 class="text-center">An Angular archive</h2>
+    </header>
+   
+    <div ng-show="archive.showByYearAndDocTypeAndKeyword === 1">   
+      <ul>
+        <h4>Publications by type and keywords</h4>
+        <li ng-repeat="publication in archive.publications | filter:{year:archive.filterYear,docType:archive.filterDocType,keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
           <blockquote>
             <strong>{{publication.year}} </strong>
             {{publication.description}}
             <cite class="clearfix">-{{publication.author}}</cite>
           </blockquote>
-          <p>&nbsp;</p>
-        </p>
-
-      </div>
-
-
-      <div ng-show="archive.showByYear === 1" class="clearfix colelem" id="u11009-11"><!-- content -->
-      Year: {{archive.filterYear}} <br><br>
-        <p ng-repeat="publication in archive.publications | filter:archive.filterYear | limitTo:5">
+        </li>
+      </ul>
+    </div>
+    <div ng-show="archive.showByDocTypeAndKeyword === 1">   
+      <ul>
+        <h4>Publications by type and keywords</h4>
+        <li ng-repeat="publication in archive.publications | filter:{docType:archive.filterDocType,keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
           <blockquote>
             <strong>{{publication.year}} </strong>
             {{publication.description}}
             <cite class="clearfix">-{{publication.author}}</cite>
           </blockquote>
-          <p>&nbsp;</p>
-        </p>
-
-      </div>
-
-      <div ng-show="archive.showByKeywords === 1" class="clearfix colelem" id="u11009-11"><!-- content -->
-      Keywords: {{archive.filterKeywords}} <br><br>
-        <p ng-repeat="publication in archive.publications | filter:archive.filterKeywords | limitTo:5">
+        </li>
+      </ul>
+    </div>
+    <div ng-show="archive.showByYearAndKeyword === 1">   
+      <ul>
+        <h4>Publications by year and keywords</h4>
+        <li ng-repeat="publication in archive.publications | filter:{year:archive.filterYear,keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
           <blockquote>
             <strong>{{publication.year}} </strong>
             {{publication.description}}
             <cite class="clearfix">-{{publication.author}}</cite>
           </blockquote>
-          <p>&nbsp;</p>
-        </p>
-      </div>
+        </li>
+      </ul>
+    </div>
+    <div ng-show="archive.showByYearAndDocType === 1">   
+      <ul>
+        <h4>Publications by year and type</h4>
+        <li ng-repeat="publication in archive.publications | filter:{year:archive.filterYear,docType:archive.filterDocType} | orderBy:'-year' | limitTo:3">
+          <blockquote>
+            <strong>{{publication.year}} </strong>
+            {{publication.description}}
+            <cite class="clearfix">-{{publication.author}}</cite>
+          </blockquote>
+        </li>
+      </ul>
+    </div>
+    <div ng-show="archive.showByYear === 1">   
+      <ul>
+        <h4>Publications by year</h4>
+        <li ng-repeat="publication in archive.publications | filter:archive.filterYear | orderBy:'-year' | limitTo:3">
+          <blockquote>
+            <strong>{{publication.year}} </strong>
+            {{publication.description}}
+            <cite class="clearfix">-{{publication.author}}</cite>
+          </blockquote>
+        </li>
+      </ul>
+    </div>
+    <div ng-show="archive.showByDocType === 1">   
+      <ul>
+        <h4>Publications by type</h4>
+        <li ng-repeat="publication in archive.publications | filter:archive.filterDocType | limitTo:3">
+          <blockquote>
+            <strong>{{publication.year}} </strong>
+            {{publication.description}}
+            <cite class="clearfix">-{{publication.author}}</cite>
+          </blockquote>
+        </li>
+      </ul>
+    </div>
+    <div ng-show="archive.showByKeywords === 1">   
+      <ul>
+        <h4>Publications by keyword</h4>
+        <li ng-repeat="publication in archive.publications | filter:archive.filterKeywords | limitTo:3">
+          <blockquote>
+            <strong>{{publication.year}} </strong>
+            {{publication.description}}
+            <cite class="clearfix">-{{publication.author}}</cite>
+          </blockquote>
+        </li>
+      </ul>
+    </div>
+
+        {{archive.filterYear}} <br>
+        {{archive.filterKeywords}} <br>
+        {{archive.filterDocType}} <br>
+    <hr>
+
+    <div>
 
 
-     </div>
+    </div>
+    <!--JBB contain this all in a div for now-->
+    </div>
+  </div><!--Close out center column div -->
+
+<!--third column-->
+
      <div class="clearfix grpelem" id="pu11889-8"><!-- column -->
       <div class="clearfix colelem" id="u11889-8"><!-- content -->
        <p id="u11889-2">_________________________________________</p>
        <p id="u11889-4">FILTER THE</p>
        <p id="u11889-6">PUBLICATIONS ARCHIVE</p> 
-       JBB<br>
-       JBB<p>JBB</p>
+
+
+         <form name="archiveForm" ng-submit="archive.search()">
+          <!--  Live Preview -->
+          <blockquote>
+            <strong>
+              &nbsp;<br>
+              {{archive.filterYear}} <br>
+              {{archive.filterKeywords}} <br>
+              {{archive.filterDocType}} <br>
+            </strong>
+          </blockquote>
+
+          <!--  Filter Form -->
+          <h4>&nbsp;</h4>
+          <fieldset>
+            <select ng-model="archive.filterYear" ng-options="years for years in [2014,2013,2012,2011,2010,2009,2008,2007]" title="Years">
+              <option value>Any Year</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <select ng-model="archive.filterDocType" ng-options="docTypes for docTypes in ['Article','Issue Brief','Report','Video']" title="Publications">
+              <option value>Any Publication Type</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <input ng-model="archive.filterKeywords" placeholder="Keywords" title="Keywords" />
+          </fieldset>
+          <fieldset>
+            <input type="submit" value="Search" />
+          </fieldset>
+
+         </form>
+
+
       </div>
-
-      <form name="archiveForm" ng-submit="archive.search()" class="form-grp clearfix colelem" id="widgetu12268">
-       <!--Type-->
-       <div class="fld-grp clearfix grpelem" id="widgetu12270"><!-- none box -->
-        <select ng-model="archive.filterType" ng-options="types for types in ['issue brief','report','video']" title="Type" tabindex="1"/>
-          <option value>Search by Type</option> 
-        </select>
-       </div>
-       <!--Year-->
-       <div class="fld-grp clearfix grpelem" id="widgetu12274"><!-- none box -->
-        <select ng-model="archive.filterYear" ng-options="years for years in [2015,2014,2013,2012,2011,2010,2009,2008,2007,2006,2005]" title="Year" tabindex="2"/>
-          <option value>Search by Year</option> 
-        </select>
-       </div>
-       <!--Keywords-->
-       <div class="fld-grp clearfix grpelem" id="widgetu12280"><!-- none box -->
-        <input ng-model="archive.filterKeywords" placeholder="Keywords" type="text" size="30" title="Keywords" tabindex="3" />
-       </div>
-       <!--Search-->
-       <fieldset>
-       <br><br><br><br><br><br><br><br><br><br>
-         <input type="Submit" value="Search" style="border: 1px; background: #ff0000;" />
-       </fieldset>
-     
-       <!--<input class="submit-btn NoWrap grpelem" id="u12320-21" type="submit" value="" tabindex="4"/>-->
-      </form>
-
      </div>
-    </div>
+
+  </div>
+
+<!--footer-->
     <div class="clearfix colelem" id="pu12088-4"><!-- group -->
      <div class="clearfix grpelem" id="u12088-4"><!-- content -->
       <p>Copyright ©2015 John W. Gardner Center at Stanford University. All rights reserved.</p>
@@ -223,29 +294,9 @@ var __adobewebfontsappname__ = "muse";
    <img class="preload" src="images/u12269-21-m.png" alt=""/>
    <img class="preload" src="images/u12269-21-fs.png" alt=""/>
   </div>
-  <!-- JS includes -->
-  <script type="text/javascript">
-   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
-</script>
-  <script type="text/javascript">
-   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
-</script>
-  <script src="scripts/museutils.js?3777594392" type="text/javascript"></script>
-  <script src="scripts/jquery.musemenu.js?415733523" type="text/javascript"></script>
-  <script src="scripts/webpro.js?474087315" type="text/javascript"></script>
-  <!-- Other scripts -->
-  <script type="text/javascript">
-   $(document).ready(function() { try {
-(function(){var a={},b=function(a){if(a.match(/^rgb/))return a=a.replace(/\s+/g,"").match(/([\d\,]+)/gi)[0].split(","),(parseInt(a[0])<<16)+(parseInt(a[1])<<8)+parseInt(a[2]);if(a.match(/^\#/))return parseInt(a.substr(1),16);return 0};(function(){$('link[type="text/css"]').each(function(){var b=($(this).attr("href")||"").match(/\/?css\/([\w\-]+\.css)\?(\d+)/);b&&b[1]&&b[2]&&(a[b[1]]=b[2])})})();(function(){$("body").append('<div class="version" style="display:none; width:1px; height:1px;"></div>');
-for(var c=$(".version"),d=0;d<Muse.assets.required.length;){var f=Muse.assets.required[d],g=f.match(/([\w\-\.]+)\.(\w+)$/),k=g&&g[1]?g[1]:null,g=g&&g[2]?g[2]:null;switch(g.toLowerCase()){case "css":k=k.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");c.addClass(k);var g=b(c.css("color")),h=b(c.css("background-color"));g!=0||h!=0?(Muse.assets.required.splice(d,1),"undefined"!=typeof a[f]&&(g!=a[f]>>>24||h!=(a[f]&16777215))&&Muse.assets.outOfDate.push(f)):d++;c.removeClass(k);break;case "js":k.match(/^jquery-[\d\.]+/gi)&&
-typeof $!="undefined"?Muse.assets.required.splice(d,1):d++;break;default:throw Error("Unsupported file type: "+g);}}c.remove();if(Muse.assets.outOfDate.length||Muse.assets.required.length)c="Some files on the server may be missing or incorrect. Clear browser cache and try again. If the problem persists please contact website author.",(d=location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi))&&Muse.assets.outOfDate.length&&(c+="\nOut of date: "+Muse.assets.outOfDate.join(",")),d&&Muse.assets.required.length&&(c+="\nMissing: "+Muse.assets.required.join(",")),alert(c)})()})();/* body */
-Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
-Muse.Utils.prepHyperlinks(true);/* body */
-Muse.Utils.initWidget('.MenuBar', function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */
-Muse.Utils.initWidget('#widgetu12268', function(elem) { new WebPro.Widget.Form(elem, {validationEvent:'submit',errorStateSensitivity:'high',fieldWrapperClass:'fld-grp',formSubmittedClass:'frm-sub-st',formErrorClass:'frm-subm-err-st',formDeliveredClass:'frm-subm-ok-st',notEmptyClass:'non-empty-st',focusClass:'focus-st',invalidClass:'fld-err-st',requiredClass:'fld-err-st',ajaxSubmit:true}); });/* #widgetu12268 */
-Muse.Utils.showWidgetsWhenReady();/* body */
-Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
-} catch(e) { if (e && 'function' == typeof e.notify) e.notify(); else Muse.Assert.fail('Error calling selector function:' + e); }});
-</script>
-   </body>
+
+<!--JBB: note that did not place muse JS includes here as did not discern any performance impact to leaving them out-->
+
+  </body>
 </html>
+
