@@ -1219,6 +1219,54 @@
 	position: relative;
 }
 
+#keywords
+{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #C4C4C4;
+	background-color: transparent;
+}
+
+#filterBtn
+{
+	min-height: 20px;
+	width: 81px;
+	position: relative;
+	margin-right: 0px;
+	margin-top: 10px;
+	background: url("../images/u12304-21.png") no-repeat 0px 0px;
+}
+
+.publications-lead
+{
+	font-size: 12px;
+	text-align: left;
+	line-height: 1.6;
+	color: #FF7A0B;
+	font-family: open-sans, sans-serif;
+	font-weight: 700;
+}
+
+.publication
+{
+	z-index: 27;
+	font-size: 12px;
+	text-align: left;
+	font-family: Verdana, Tahoma, Geneva, sans-serif;
+	line-height: 1.1;
+	width: 343px;
+	background-color: transparent;
+	margin-top: 12px;
+	position: relative;
+}
+
+.publications-year
+{
+	color: #FF7A0B;
+	font-weight: 700;
+}
+
+
 body
 {
 	position: relative;

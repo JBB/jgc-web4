@@ -182,65 +182,25 @@ var __adobewebfontsappname__ = "muse";
       </div>
       <div class="clearfix colelem" id="u12106-5"><!-- content -->
        <p id="u12106-3"><a class="nonblock" href="http://en.wiki2.org/wiki/John_W._Gardner" target="_blank"><span id="u12106">To receive announcements from the Gardner Center, please enter your email address.</span></a></p>
-
-<!---JBB--->
-    <script>
-    //$(function () {
-      $("#email").keyup(function(event){
-        if(event.keyCode == 13){
-          $("#emailBtn").click();
-        }
-      });
-    //});
-
-    function validE(email) {
-      console.log("JBB" + email + "JBB");
-      var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-      return regex.test(email);
-      //var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-      //return filter.test(email);
-    }
-
-    function signup() {
-      var email = $('#email');
-      if (validE(email.val())) {
-        email.replaceWith('<span>Thank you for joining the mailing list</span>');
-        $('#error').hide();
-        $('#emailBtn').hide();
-        //send leslie email
-        if ($.browser.msie && window.XDomainRequest) {
-        // Use Microsoft XDR
-          var xdr = new XDomainRequest();
-          xdr.open("get",'http://cs210net.stanford.edu/cgi-bin/jgc-mailer.cgi?email=' + email.val());
-          xdr.onload = function() {
-              // XDomainRequest doesn't provide responseXml, so if you need it:
-              var dom = new ActiveXObject("Microsoft.XMLDOM");
-              dom.async = false;
-              dom.loadXML(xdr.responseText);
-          };
-          xdr.send();
-        } else {
-          $.ajax({
-            type: 'POST',
-            url: 'http://cs210net.stanford.edu/cgi-bin/jgc-mailer.cgi',
-            data: { 'email': email.val() }
-          });
-        }          
-      } else {
-        $('#error').show();
-      }
-    }
-    </script>
-<p>&nbsp;</p>
-    <input type=email size=20 autofocus id="email" placeholder="">&nbsp;<br>
-    <input type=button id="emailBtn" value="" onclick="signup();"><br><br>
-
-    <span id="error" style="display: none;">Please enter a valid email.</span> 
-    <br>
-
-<!---JBB--->
-
       </div>
+      <form class="form-grp clearfix colelem" id="widgetu12288" method="post" enctype="multipart/form-data" action="scripts/form-u12288.php"><!-- none box -->
+       <div class="fld-grp clearfix grpelem" id="widgetu12296" data-required="true" data-type="email"><!-- none box -->
+        <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u12299-3"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu12296_input" name="Email" tabindex="1"/></span>
+       </div>
+       <div class="clearfix grpelem" id="u12294-4"><!-- content -->
+        <p>Submitting Form...</p>
+       </div>
+       <div class="clearfix grpelem" id="u12295-4"><!-- content -->
+        <p>The server encountered an error.</p>
+       </div>
+       <div class="clearfix grpelem" id="u12293-4"><!-- content -->
+        <p>Form received.</p>
+       </div>
+       <input class="submit-btn NoWrap grpelem" id="u12304-21" type="submit" value="" tabindex="3"/><!-- state-based BG images -->
+       <div class="fld-grp clearfix grpelem" id="widgetu12300" data-required="false"><!-- none box -->
+        <span class="fld-textarea actAsDiv clearfix grpelem" id="u12303-3"><!-- content --><textarea class="wrapped-input" id="widgetu12300_input" name="custom_U12300" tabindex="2"></textarea></span>
+       </div>
+      </form>
      </div>
     </div>
     <div class="clearfix colelem" id="pu12088-4"><!-- group -->

@@ -123,17 +123,15 @@ var __adobewebfontsappname__ = "muse";
        <p id="u11015-7"><a class="nonblock" href="videos-list.html">&gt; Browse Videos</a></p>
     <!--  Store Header  -->
     <!--JBB contain this all in a div for now-->
-    <header>
-      <h1 class="text-center">Research Publications</h1>
-      <h2 class="text-center">An Angular archive</h2>
-    </header>
+    <p>&nbsp;</p> 
    
     <div ng-show="archive.showByYearAndDocTypeAndKeyword === 1">   
       <ul>
-        <h4>Publications by type and keywords</h4>
+        <span class="publications-lead">Publications by year, type and keywords</span>
+        <p>&nbsp;</p> 
         <li ng-repeat="publication in archive.publications | filter:{year:archive.filterYear,docType:archive.filterDocType,keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
-          <blockquote>
-            <strong>{{publication.year}} </strong>
+          <blockquote class="publication">
+            <strong class="publications-year">{{publication.year}} </strong>
             {{publication.description}}
             <cite class="clearfix">-{{publication.author}}</cite>
           </blockquote>
@@ -142,10 +140,11 @@ var __adobewebfontsappname__ = "muse";
     </div>
     <div ng-show="archive.showByDocTypeAndKeyword === 1">   
       <ul>
-        <h4>Publications by type and keywords</h4>
+        <span class="publicatins-lead">Publications by type and keywords</span>
+        <p>&nbsp;</p> 
         <li ng-repeat="publication in archive.publications | filter:{docType:archive.filterDocType,keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
-          <blockquote>
-            <strong>{{publication.year}} </strong>
+          <blockquote class="publication">
+            <strong class="publications-year">{{publication.year}} </strong>
             {{publication.description}}
             <cite class="clearfix">-{{publication.author}}</cite>
           </blockquote>
@@ -154,10 +153,11 @@ var __adobewebfontsappname__ = "muse";
     </div>
     <div ng-show="archive.showByYearAndKeyword === 1">   
       <ul>
-        <h4>Publications by year and keywords</h4>
+        <span class="publications-lead">Publications by year and keywords</span>
+        <p>&nbsp;</p> 
         <li ng-repeat="publication in archive.publications | filter:{year:archive.filterYear,keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
-          <blockquote>
-            <strong>{{publication.year}} </strong>
+          <blockquote class="publication">
+            <strong class="publications-year">{{publication.year}} </strong>
             {{publication.description}}
             <cite class="clearfix">-{{publication.author}}</cite>
           </blockquote>
@@ -166,10 +166,11 @@ var __adobewebfontsappname__ = "muse";
     </div>
     <div ng-show="archive.showByYearAndDocType === 1">   
       <ul>
-        <h4>Publications by year and type</h4>
+        <span class="publications-lead">Publications by year and type</span>
+        <p>&nbsp;</p> 
         <li ng-repeat="publication in archive.publications | filter:{year:archive.filterYear,docType:archive.filterDocType} | orderBy:'-year' | limitTo:3">
-          <blockquote>
-            <strong>{{publication.year}} </strong>
+          <blockquote class="publication">
+            <strong class="publications-year">{{publication.year}} </strong>
             {{publication.description}}
             <cite class="clearfix">-{{publication.author}}</cite>
           </blockquote>
@@ -178,22 +179,25 @@ var __adobewebfontsappname__ = "muse";
     </div>
     <div ng-show="archive.showByYear === 1">   
       <ul>
-        <h4>Publications by year</h4>
+        <span class="publications-lead">Publications by year</span>
+        <p>&nbsp;</p> 
         <li ng-repeat="publication in archive.publications | filter:archive.filterYear | orderBy:'-year' | limitTo:3">
-          <blockquote>
-            <strong>{{publication.year}} </strong>
+          <blockquote class="publication">
+            <strong class="publications-year">{{publication.year}} </strong>
             {{publication.description}}
             <cite class="clearfix">-{{publication.author}}</cite>
           </blockquote>
+          <br>
         </li>
       </ul>
     </div>
     <div ng-show="archive.showByDocType === 1">   
       <ul>
-        <h4>Publications by type</h4>
+        <span class="publications-lead">Publications by type</span>
+        <p>&nbsp;</p> 
         <li ng-repeat="publication in archive.publications | filter:archive.filterDocType | limitTo:3">
-          <blockquote>
-            <strong>{{publication.year}} </strong>
+          <blockquote class="publication">
+            <strong class="publications-year">{{publication.year}} </strong>
             {{publication.description}}
             <cite class="clearfix">-{{publication.author}}</cite>
           </blockquote>
@@ -202,21 +206,17 @@ var __adobewebfontsappname__ = "muse";
     </div>
     <div ng-show="archive.showByKeywords === 1">   
       <ul>
-        <h4>Publications by keyword</h4>
+        <span class="publications-lead">Publications by keyword</span>
+        <p>&nbsp;</p> 
         <li ng-repeat="publication in archive.publications | filter:archive.filterKeywords | limitTo:3">
-          <blockquote>
-            <strong>{{publication.year}} </strong>
+          <blockquote class="publication">
+            <strong class="publications-year">{{publication.year}} </strong>
             {{publication.description}}
             <cite class="clearfix">-{{publication.author}}</cite>
           </blockquote>
         </li>
       </ul>
     </div>
-
-        {{archive.filterYear}} <br>
-        {{archive.filterKeywords}} <br>
-        {{archive.filterDocType}} <br>
-    <hr>
 
     <div>
 
@@ -253,16 +253,18 @@ var __adobewebfontsappname__ = "muse";
               <option value>Any Year</option>
             </select>
           </fieldset>
+          <br>
           <fieldset>
             <select ng-model="archive.filterDocType" ng-options="docTypes for docTypes in ['Article','Issue Brief','Report','Video']" title="Publications">
               <option value>Any Publication Type</option>
             </select>
           </fieldset>
+          <br>
           <fieldset>
-            <input ng-model="archive.filterKeywords" placeholder="Keywords" title="Keywords" />
+            <input ng-model="archive.filterKeywords" id="keywords" placeholder="Keywords" title="Keywords" />
           </fieldset>
           <fieldset>
-            <input type="submit" value="Search" />
+            <input type="submit" id="filterBtn" value="" />
           </fieldset>
 
          </form>
