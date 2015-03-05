@@ -1,17 +1,19 @@
-#email
+#u11538-8,#u11538-18
 {
-	border-width: 1px;
-	border-style: solid;
-	border-color: #C4C4C4;
-	background-color: transparent;
+	font-size: 12px;
+	font-family: open-sans, sans-serif;
+	font-weight: 300;
+	font-style: italic;
 }
 
-#emailBtn
+#u11538-7,#u11538-13,#u11538-20,#u11538-23
 {
-	min-height: 20px;
-	width: 81px;
-	position: relative;
-	margin-right: -10000px;
-	margin-top: 10px;
-	background: url("../images/u12304-21.png") no-repeat 0px 0px;
+	font-family: open-sans, sans-serif;
+	font-weight: 700;
+	line-height: 0px;/* 0 for mixed font sized paras; applied on spans instead */
+}
+
+#u11538-7  span,#u11538-7  a,#u11538-13  span,#u11538-13  a,#u11538-20  span,#u11538-20  a,#u11538-23  span,#u11538-23  a /* line-height set on spans of mixed font sized paras */
+{
+	line-height: 1.5;
 }

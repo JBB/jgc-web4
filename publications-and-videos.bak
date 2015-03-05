@@ -125,11 +125,11 @@ var __adobewebfontsappname__ = "muse";
     <!--JBB contain this all in a div for now-->
     <p>&nbsp;</p> 
    
-    <div ng-show="archive.showByYearAndTopicAreaAndKeyword === 1">   
+    <div ng-show="archive.showByYearAndDocTypeAndKeyword === 1">   
       <ul>
-        <span class="publications-lead">Publications by year, topic area and keywords</span>
+        <span class="publications-lead">Publications by year, type and keywords</span>
         <p>&nbsp;</p> 
-        <li ng-repeat="publication in archive.publications | filter:{year:archive.filterYear,topicArea:archive.filterTopicArea,keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
+        <li ng-repeat="publication in archive.publications | filter:{year:archive.filterYear,docType:archive.filterDocType,keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
           <blockquote class="publication">
             <strong class="publications-year">{{publication.year}} </strong>
             {{publication.description}}
@@ -138,11 +138,11 @@ var __adobewebfontsappname__ = "muse";
         </li>
       </ul>
     </div>
-    <div ng-show="archive.showByTopicAreaAndKeyword === 1">   
+    <div ng-show="archive.showByDocTypeAndKeyword === 1">   
       <ul>
-        <span class="publicatins-lead">Publications by topic area and keywords</span>
+        <span class="publicatins-lead">Publications by type and keywords</span>
         <p>&nbsp;</p> 
-        <li ng-repeat="publication in archive.publications | filter:{topicArea:archive.filterTopicArea,keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
+        <li ng-repeat="publication in archive.publications | filter:{docType:archive.filterDocType,keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
           <blockquote class="publication">
             <strong class="publications-year">{{publication.year}} </strong>
             {{publication.description}}
@@ -164,11 +164,11 @@ var __adobewebfontsappname__ = "muse";
         </li>
       </ul>
     </div>
-    <div ng-show="archive.showByYearAndTopicArea === 1">   
+    <div ng-show="archive.showByYearAndDocType === 1">   
       <ul>
-        <span class="publications-lead">Publications by year and topic area</span>
+        <span class="publications-lead">Publications by year and type</span>
         <p>&nbsp;</p> 
-        <li ng-repeat="publication in archive.publications | filter:{year:archive.filterYear,topicArea:archive.filterTopicArea} | orderBy:'-year' | limitTo:3">
+        <li ng-repeat="publication in archive.publications | filter:{year:archive.filterYear,docType:archive.filterDocType} | orderBy:'-year' | limitTo:3">
           <blockquote class="publication">
             <strong class="publications-year">{{publication.year}} </strong>
             {{publication.description}}
@@ -191,11 +191,11 @@ var __adobewebfontsappname__ = "muse";
         </li>
       </ul>
     </div>
-    <div ng-show="archive.showByTopicArea === 1">   
+    <div ng-show="archive.showByDocType === 1">   
       <ul>
-        <span class="publications-lead">Publications by topic area</span>
+        <span class="publications-lead">Publications by type</span>
         <p>&nbsp;</p> 
-        <li ng-repeat="publication in archive.publications | filter:archive.filterTopicArea | limitTo:3">
+        <li ng-repeat="publication in archive.publications | filter:archive.filterDocType | limitTo:3">
           <blockquote class="publication">
             <strong class="publications-year">{{publication.year}} </strong>
             {{publication.description}}
@@ -242,7 +242,7 @@ var __adobewebfontsappname__ = "muse";
               &nbsp;<br>
               {{archive.filterYear}} <br>
               {{archive.filterKeywords}} <br>
-              {{archive.filterTopicArea}} <br>
+              {{archive.filterDocType}} <br>
             </strong>
           </blockquote>
 
@@ -255,8 +255,8 @@ var __adobewebfontsappname__ = "muse";
           </fieldset>
           <br>
           <fieldset>
-            <select ng-model="archive.filterTopicArea" ng-options="topicAreas for topicAreas in ['Early Childhood Education','College Readiness','Obesity Statistics']" title="Topic Areas">
-              <option value>Any Topic Area</option>
+            <select ng-model="archive.filterDocType" ng-options="docTypes for docTypes in ['Article','Issue Brief','Report','Video']" title="Publications">
+              <option value>Any Publication Type</option>
             </select>
           </fieldset>
           <br>

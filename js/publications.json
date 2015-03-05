@@ -1,10 +1,10 @@
   [
     {
-      "name": "Obesity Is Widespread",
+      "name": "Early Childhood Education Is Critical",
       "description": "Many young kids struggle with poor nutrition and lack of exercise.",
       "author": "Monika Sanchez",
       "year": 2007,
-      "topicArea: "Early Childhood Education"
+      "topicArea": "Early Childhood Education",
       "docType": "Report",
       "documentUrl": "http://jgc.stanford.edu/resources/publications/obesity.pdf",
       "keywords": "Obesity Monika Sanchez",
@@ -19,11 +19,11 @@
       "views": 0
     },
     {
-      "name": "Obesity Is Incredibly Widespread",
+      "name": "Educatino Needs Reform",
       "description": "Many elementrayr age kids struggle with poor nutrition and lack of exercise.",
       "author": "Mo Black",
       "year": 2011,
-      "topicArea: "Early Childhood Education"
+      "topicArea": "College Readiness",
       "docType": "Report",
       "documentUrl": "http://jgc.stanford.edu/resources/publications/obesity.pdf",
       "keywords": "Obestity Incredibly exercise Mo Black",
@@ -38,14 +38,14 @@
       "views": 0
     },
     {
-      "name": "Obesity Is So Widespread",
+      "name": "Obesity Is Widespread",
       "description": "Many kids struggle with poor nutrition and lack of exercise.",
       "author": "Murphy Brown",
       "year": 2014,
-      "topicArea: "Early Childhood Education"
+      "topicArea": "Obesity Statistics",
       "docType": "Article",
       "documentUrl": "http://jgc.stanford.edu/resources/publications/obesity.pdf",
-      "keywords": "Murphy Brown Obesity Widespread nutrition exercise",
+      "keywords": "Murphy Brown Widespread nutrition exercise",
       "images": [
         "images/gem-02.gif",
         "images/gem-05.gif",
