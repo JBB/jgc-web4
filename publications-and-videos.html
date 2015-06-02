@@ -125,6 +125,14 @@ var __adobewebfontsappname__ = "muse";
     <!--JBB contain this all in a div for now-->
     <p>&nbsp;</p> 
    
+    <div ng-show="archive.showInitialState === 1">   
+      <ul>
+        <span class="publications-lead">An initial landing page TBD by Nancy, Leslie & Jackie</span>
+        <p>&nbsp;</p>
+        <li> Text provided by Nancy and Leslie will go here, styled according to a design to be provided by Jackie. 
+        </li>
+      </ul>
+    </div>
     <div ng-show="archive.showByYearAndTopicAreaAndKeyword === 1">   
       <ul>
         <span class="publications-lead">Publications by year, topic area and keywords</span>
@@ -236,35 +244,31 @@ var __adobewebfontsappname__ = "muse";
 
 
          <form name="archiveForm" ng-submit="archive.search()">
-          <!--  Live Preview -->
-          <blockquote>
-            <strong>
-              &nbsp;<br>
-              {{archive.filterYear}} <br>
-              {{archive.filterKeywords}} <br>
-              {{archive.filterTopicArea}} <br>
-            </strong>
-          </blockquote>
 
           <!--  Filter Form -->
           <h4>&nbsp;</h4>
           <fieldset>
-            <select ng-model="archive.filterYear" ng-options="years for years in [2014,2013,2012,2011,2010,2009,2008,2007]" title="Years">
+            <select ng-model="archive.filterYear" ng-options="years for years in [2014,2013,2012,2011,2010,2009,2008,2007]" ng-change="archive.search()" title="Years">
               <option value>Any Year</option>
             </select>
           </fieldset>
           <br>
           <fieldset>
-            <select ng-model="archive.filterTopicArea" ng-options="topicAreas for topicAreas in ['Early Childhood Education','College Readiness','Obesity Statistics']" title="Topic Areas">
+            <select ng-model="archive.filterTopicArea" ng-options="topicAreas for topicAreas in ['Early Childhood Education','College Readiness','Obesity Statistics']" ng-change="archive.search()" title="Topic Areas">
               <option value>Any Topic Area</option>
             </select>
           </fieldset>
           <br>
           <fieldset>
-            <input ng-model="archive.filterKeywords" id="keywords" placeholder="Keywords" title="Keywords" />
+            <input ng-model="archive.filterKeywords" id="keywords" placeholder="Keywords" ng-change="archive.search()" title="Keywords" />
           </fieldset>
-          <fieldset>
+          <!--JBB Removing Submit button><fieldset>
             <input type="submit" id="filterBtn" value="" />
+          </fieldset>
+          -->
+          <br>
+          <fieldset>
+            <input ng-model="archive.showInitialState" type="button" id="resetBtn" ng-click="archive.resetAll()" value="Reset" />
           </fieldset>
 
          </form>

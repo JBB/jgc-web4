@@ -13,7 +13,8 @@
     this.filterKeywords = "";
     this.filterDocType = "";
     this.filterTopicArea = "";
-    this.showByYear = 1;
+    this.showInitialState = 1;
+    this.showByYear = 0;
     this.showByDocType = 0;
     this.showByTopicArea = 0;
     this.showByKeywords = 0;
@@ -22,16 +23,29 @@
     this.showByTopicAreaAndKeyword = 0;
     this.showByYearAndTopicAreaAndKeyword = 0;
 
-    //Need to account for combo searches like year + author
-    //Also need to show only one result pane at a time
-    //Probably also want a default search in there
     //future nice to haves:
-    //keep publications in a separate json file
     //keep track of views by publication in that file (popularity)
     //Perhaps have default sort action be by popularity
-    //should have things sorted by year DSC
+    this.resetAll = function() {
+      this.filterYear = "";
+      this.filterAuthor = "";
+      this.filterKeywords = "";
+      this.filterDocType = "";
+      this.filterTopicArea = "";
+      this.showInitialState = 1;
+      this.showByYear = 0;
+      this.showByDocType = 0;
+      this.showByTopicArea = 0;
+      this.showByKeywords = 0;
+      this.showByYearAndTopicArea = 0;
+      this.showByYearAndKeyword = 0;
+      this.showByTopicAreaAndKeyword = 0;
+      this.showByYearAndTopicAreaAndKeyword = 0;
+    };
+
     this.search = function(){
       if ((this.filterYear > 1990) && (this.filterTopicArea) && (this.filterKeywords)){
+        this.showInitialState = 0;
         this.showByYearAndTopicAreaAndKeyword = 1;
         this.showByTopicAreaAndKeyword = 0;
         this.showByYearAndKeyword = 0;
@@ -41,6 +55,7 @@
         this.showByKeywords = 0;
       }
       else if ((this.filterTopicArea) && (this.filterKeywords)){
+        this.showInitialState = 0;
         this.showByYearAndTopicAreaAndKeyword = 0;
         this.showByTopicAreaAndKeyword = 1;
         this.showByYearAndKeyword = 0;
@@ -50,6 +65,7 @@
         this.showByKeywords = 0;
       }
       else if ((this.filterYear > 1990) && (this.filterKeywords)){
+        this.showInitialState = 0;
         this.showByYearAndTopicAreaAndKeyword = 0;
         this.showByTopicAreaAndKeyword = 0;
         this.showByYearAndKeyword = 1;
@@ -59,6 +75,7 @@
         this.showByKeywords = 0;
       }
       else if ((this.filterYear > 1990) && (this.filterTopicArea)){
+        this.showInitialState = 0;
         this.showByYearAndTopicAreaAndKeyword = 0;
         this.showByTopicAreaAndKeyword = 0;
         this.showByYearAndKeyword = 0;
@@ -68,6 +85,7 @@
         this.showByKeywords = 0;
       }
       else if ((this.filterYear > 1990) && (this.filterYear < 2020)){
+        this.showInitialState = 0;
         this.showByYearAndTopicAreaAndKeyword = 0;
         this.showByTopicAreaAndKeyword = 0;
         this.showByYearAndKeyword = 0;
@@ -77,6 +95,7 @@
         this.showByKeywords = 0;
       }
       else if (this.filterTopicArea){
+        this.showInitialState = 0;
         this.showByYearAndTopicAreaAndKeyword = 0;
         this.showByTopicAreaAndKeyword = 0;
         this.showByYearAndKeyword = 0;
@@ -86,6 +105,7 @@
         this.showByKeywords = 0;
       }
       else if (this.filterKeywords){
+        this.showInitialState = 0;
         this.showByYearAndTopicAreaAndKeyword = 0;
         this.showByTopicAreaAndKeyword = 0;
         this.showByYearAndKeyword = 0;
