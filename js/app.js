@@ -7,25 +7,7 @@
      $http.get('/jgc-web4/js/publications.json').success(function(data){
        archive.publications = data;
      });
-    this.publications = archive.publications;
-    this.filterYear = "";
-    this.filterAuthor = "";
-    this.filterKeywords = "";
-    this.filterDocType = "";
-    this.filterTopicArea = "";
-    this.showInitialState = 1;
-    this.showByYear = 0;
-    this.showByDocType = 0;
-    this.showByTopicArea = 0;
-    this.showByKeywords = 0;
-    this.showByYearAndTopicArea = 0;
-    this.showByYearAndKeyword = 0;
-    this.showByTopicAreaAndKeyword = 0;
-    this.showByYearAndTopicAreaAndKeyword = 0;
 
-    //future nice to haves:
-    //keep track of views by publication in that file (popularity)
-    //Perhaps have default sort action be by popularity
     this.resetAll = function() {
       this.filterYear = "";
       this.filterAuthor = "";
@@ -42,6 +24,7 @@
       this.showByTopicAreaAndKeyword = 0;
       this.showByYearAndTopicAreaAndKeyword = 0;
     };
+    this.resetAll();
 
     this.search = function(){
       if ((this.filterYear > 1990) && (this.filterTopicArea) && (this.filterKeywords)){
