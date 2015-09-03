@@ -1,13 +1,16 @@
   [
     {
       "name": "Early Childhood Education Is Critical",
-      "description": "Many young kids struggle with poor nutrition and lack of exercise.",
-      "author": "Monika Sanchez",
+      "author": "Monika Sanchez, Leslie Patron",
       "year": 2007,
+      "location": "national",
       "topicArea": "Early Childhood Education",
+      "filename": "obesity.pdf",
+      "keywords": "early childhool English language",
+      "description": "Many young kids struggle with poor nutrition and lack of exercise.",
       "docType": "Report",
       "documentUrl": "http://jgc.stanford.edu/resources/publications/obesity.pdf",
-      "keywords": "Obesity Monika Sanchez",
+      "documentPath": "http://jgc.stanford.edu/resources/publications/",
       "images": [
         "images/gem-02.gif",
         "images/gem-05.gif",

@@ -1237,6 +1237,23 @@
 	background: url("../images/u12304-21.png") no-repeat 0px 0px;
 }
 
+#resetBtn
+{
+	min-height: 20px;
+	width: 81px;
+	position: relative;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #C4C4C4;
+	background-color: transparent;
+	font-family: Verdana, Tahoma, Geneva, sans-serif;
+	font-size: 10px;
+	font-weight: 600;
+	margin-right: 0px;
+	margin-top: 10px;
+	/*background: url("../images/u12304-21.png") no-repeat 0px 0px;*/
+}
+
 .publications-lead
 {
 	font-size: 12px;
