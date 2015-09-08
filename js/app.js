@@ -1,12 +1,17 @@
 (function() {
   var app = angular.module('pubStore', []);
 
-  app.controller('ArchiveController', ['$http', function($http){
+  app.config(['$locationProvider', function($locationProvider){
+        $locationProvider.html5Mode(true);    
+  }]);
+
+  app.controller('ArchiveController', ['$http','$scope','$location', function($http,$scope,$location){
      var archive = this;
      archive.publications = [ ];
      $http.get('/jgc-web4/js/publications.json').success(function(data){
        archive.publications = data;
      });
+  
 
     this.resetAll = function() {
       this.filterYear = "";
@@ -98,7 +103,19 @@
         this.showByKeywords = 1;
       }
     };
+
+    var qs = $location.search();
+    console.log(qs);
+    if ('kw' in qs){
+      if (qs['kw'] != ''){ 
+        this.filterKeywords = qs['kw'];
+        this.search();
+      }
+    }
+
   } ]);
+
+
 
   app.controller('FilterController', function(){
     this.filter = "none";
