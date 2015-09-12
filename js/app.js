@@ -103,7 +103,6 @@
         this.showByKeywords = 1;
       }
     };
-
     var qs = $location.search();
     console.log(qs);
     if ('kw' in qs){
@@ -111,8 +110,7 @@
         this.filterKeywords = qs['kw'];
         this.search();
       }
-    }
-
+    } 
   } ]);
 
 
