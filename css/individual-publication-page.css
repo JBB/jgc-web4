@@ -606,3 +606,13 @@ body
 	padding-bottom: 100px;
 }
 
+
+#social-media
+{
+	z-index: 219;
+	width: 345px;
+	min-height: 20px;
+	margin-right: -10000px;
+	margin-top: 0px;
+	margin-left: 0px;
+}
