@@ -148,11 +148,11 @@ var __adobewebfontsappname__ = "muse";
         </li>
       </ul>
     </div>
-    <div ng-show="archive.showByGeographyAndPolicyFocusAreaAndKeyword === 1">   
+    <div ng-show="archive.showByYearAndTopicAreaAndKeyword === 1">   
       <ul>
         <span class="publications-lead">Publications by geography, policy focus area and keywords</span>
         <p>&nbsp;</p> 
-        <li ng-repeat="publication in archive.publications | filter:{Geography:archive.filterGeography,PolicyFocusArea:archive.filterPolicyFocusArea,Keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
+        <li ng-repeat="publication in archive.publications | filter:{year:archive.filterYear,topicArea:archive.filterTopicArea,keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
           <blockquote class="publication">
             <strong class="publications-year">{{publication.year}} </strong>
             {{publication.Title}} <!--JBB use target="_self" on links to work with angular-->
@@ -160,11 +160,11 @@ var __adobewebfontsappname__ = "muse";
         </li>
       </ul>
     </div>
-    <div ng-show="archive.showByPolicyFocusAreaAndKeyword === 1">   
+    <div ng-show="archive.showByTopicAreaAndKeyword === 1">   
       <ul>
         <span class="publicatins-lead">Publications by policy focus area and keywords</span>
         <p>&nbsp;</p> 
-        <li ng-repeat="publication in archive.publications | filter:{PolicyFocusArea:archive.filterPolicyFocusArea,Keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
+        <li ng-repeat="publication in archive.publications | filter:{topicArea:archive.filterTopicArea,keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
           <blockquote class="publication">
             <strong class="publications-year">{{publication.year}} </strong>
             {{publication.Title}}
@@ -172,11 +172,11 @@ var __adobewebfontsappname__ = "muse";
         </li>
       </ul>
     </div>
-    <div ng-show="archive.showByGeographyAndKeyword === 1">   
+    <div ng-show="archive.showByYearAndKeyword === 1">   
       <ul>
         <span class="publications-lead">Publications by geography and keywords</span>
         <p>&nbsp;</p> 
-        <li ng-repeat="publication in archive.publications | filter:{Geography:archive.filterGeography,Keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
+        <li ng-repeat="publication in archive.publications | filter:{year:archive.filterYear,keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
           <blockquote class="publication">
             <strong class="publications-year">{{publication.year}} </strong>
             {{publication.Title}}
@@ -184,11 +184,11 @@ var __adobewebfontsappname__ = "muse";
         </li>
       </ul>
     </div>
-    <div ng-show="archive.showByGeographyAndPolicyFocusArea === 1">   
+    <div ng-show="archive.showByYearAndTopicArea === 1">   
       <ul>
         <span class="publications-lead">Publications by geography and policy focus area</span>
         <p>&nbsp;</p> 
-        <li ng-repeat="publication in archive.publications | filter:{Geography:archive.filterGeography,PolicyFocusArea:archive.filterPolicyFocusArea} | orderBy:'-year' | limitTo:3">
+        <li ng-repeat="publication in archive.publications | filter:{year:archive.filterYear,topicArea:archive.filterTopicArea} | orderBy:'-year' | limitTo:3">
           <blockquote class="publication">
             <strong class="publications-year">{{publication.year}} </strong>
             {{publication.Title}}
@@ -196,11 +196,11 @@ var __adobewebfontsappname__ = "muse";
         </li>
       </ul>
     </div>
-    <div ng-show="archive.showByGeography === 1">   
+    <div ng-show="archive.showByYear === 1">   
       <ul>
         <span class="publications-lead">Publications by geography</span>
         <p>&nbsp;</p> 
-        <li ng-repeat="publication in archive.publications | filter:archive.filterGeography | orderBy:'-year' | limitTo:3">
+        <li ng-repeat="publication in archive.publications | filter:archive.filterYear | orderBy:'-year' | limitTo:3">
           <blockquote class="publication">
             <strong class="publications-year">{{publication.year}} </strong>
             {{publication.Title}}
@@ -209,11 +209,11 @@ var __adobewebfontsappname__ = "muse";
         </li>
       </ul>
     </div>
-    <div ng-show="archive.showByPolicyFocusArea === 1">   
+    <div ng-show="archive.showByTopicArea === 1">   
       <ul>
         <span class="publications-lead">Publications by policy focus area</span>
         <p>&nbsp;</p> 
-        <li ng-repeat="publication in archive.publications | filter:archive.filterPolicyFocusArea | limitTo:3">
+        <li ng-repeat="publication in archive.publications | filter:archive.filterTopicArea | limitTo:3">
           <blockquote class="publication">
             <strong class="publications-year">{{publication.year}} </strong>
             {{publication.Title}}
@@ -256,13 +256,13 @@ var __adobewebfontsappname__ = "muse";
           <!--  Filter Form -->
           <h4>&nbsp;</h4>
           <fieldset>
-            <select ng-model="archive.filterGeography" ng-options="Geographies for Geographies in ['California','National','Near Neighbor Communities','San Francisco / Alameda Counties']" ng-change="archive.search()" title="Geographies">
-              <option value>Any Geography</option>
+            <select ng-model="archive.filterYear" ng-options="years for years in [2014,2013,2012,2011,2010,2009,2008,2007]" ng-change="archive.search()" title="Years">
+              <option value>Any Year</option>
             </select>
           </fieldset>
           <br>
           <fieldset>
-            <select ng-model="archive.filterPolicyFocusArea" ng-options="PolicyFocusAreas for PolicyFocusAreas in ['College, Career, and Civic Readiness','Early Childhood (0-8)','Families, Communities, and Schools','Out-of-School Time','Youth Health and Wellness']" ng-change="archive.search()" title="Policy Focus Areas">
+            <select ng-model="archive.filterTopicArea" ng-options="topicAreas for topicAreas in ['Early Childhood Education','College Readiness','Obesity Statistics']" ng-change="archive.search()" title="Topic Areas">
               <option value>Any Policy Focus Area</option>
             </select>
           </fieldset>

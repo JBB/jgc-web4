@@ -8,98 +8,98 @@
   app.controller('ArchiveController', ['$http','$scope','$location', function($http,$scope,$location){
      var archive = this;
      archive.publications = [ ];
-     $http.get('/jgc-web4/js/publications.json').success(function(data){
+     $http.get('/jgc-web4/js/pubs2.json').success(function(data){
        archive.publications = data;
      });
   
 
     this.resetAll = function() {
-      this.filterYear = "";
+      this.filterGeography = "";
       this.filterAuthor = "";
       this.filterKeywords = "";
       this.filterDocType = "";
-      this.filterTopicArea = "";
+      this.filterPolicyFocusArea = "";
       this.showInitialState = 1;
-      this.showByYear = 0;
+      this.showByGeography = 0;
       this.showByDocType = 0;
-      this.showByTopicArea = 0;
+      this.showByPolicyFocusArea = 0;
       this.showByKeywords = 0;
-      this.showByYearAndTopicArea = 0;
-      this.showByYearAndKeyword = 0;
-      this.showByTopicAreaAndKeyword = 0;
-      this.showByYearAndTopicAreaAndKeyword = 0;
+      this.showByGeographyAndPolicyFocusArea = 0;
+      this.showByGeographyAndKeyword = 0;
+      this.showByPolicyFocusAreaAndKeyword = 0;
+      this.showByGeographyAndPolicyFocusAreaAndKeyword = 0;
     };
     this.resetAll();
 
     this.search = function(){
-      if ((this.filterYear > 1990) && (this.filterTopicArea) && (this.filterKeywords)){
+      if ((this.filterGeography > 1990) && (this.filterPolicyFocusArea) && (this.filterKeywords)){
         this.showInitialState = 0;
-        this.showByYearAndTopicAreaAndKeyword = 1;
-        this.showByTopicAreaAndKeyword = 0;
-        this.showByYearAndKeyword = 0;
-        this.showByYearAndTopicArea = 0;
-        this.showByYear = 0;
-        this.showByTopicArea = 0;
+        this.showByGeographyAndPolicyFocusAreaAndKeyword = 1;
+        this.showByPolicyFocusAreaAndKeyword = 0;
+        this.showByGeographyAndKeyword = 0;
+        this.showByGeographyAndPolicyFocusArea = 0;
+        this.showByGeography = 0;
+        this.showByPolicyFocusArea = 0;
         this.showByKeywords = 0;
       }
-      else if ((this.filterTopicArea) && (this.filterKeywords)){
+      else if ((this.filterPolicyFocusArea) && (this.filterKeywords)){
         this.showInitialState = 0;
-        this.showByYearAndTopicAreaAndKeyword = 0;
-        this.showByTopicAreaAndKeyword = 1;
-        this.showByYearAndKeyword = 0;
-        this.showByYearAndTopicArea = 0;
-        this.showByYear = 0;
-        this.showByTopicArea = 0;
+        this.showByGeographyAndPolicyFocusAreaAndKeyword = 0;
+        this.showByPolicyFocusAreaAndKeyword = 1;
+        this.showByGeographyAndKeyword = 0;
+        this.showByGeographyAndPolicyFocusArea = 0;
+        this.showByGeography = 0;
+        this.showByPolicyFocusArea = 0;
         this.showByKeywords = 0;
       }
-      else if ((this.filterYear > 1990) && (this.filterKeywords)){
+      else if ((this.filterGeography) && (this.filterKeywords)){
         this.showInitialState = 0;
-        this.showByYearAndTopicAreaAndKeyword = 0;
-        this.showByTopicAreaAndKeyword = 0;
-        this.showByYearAndKeyword = 1;
-        this.showByYearAndTopicArea = 0;
-        this.showByYear = 0;
-        this.showByTopicArea = 0;
+        this.showByGeographyAndPolicyFocusAreaAndKeyword = 0;
+        this.showByPolicyFocusAreaAndKeyword = 0;
+        this.showByGeographyAndKeyword = 1;
+        this.showByGeographyAndPolicyFocusArea = 0;
+        this.showByGeography = 0;
+        this.showByPolicyFocusArea = 0;
         this.showByKeywords = 0;
       }
-      else if ((this.filterYear > 1990) && (this.filterTopicArea)){
+      else if ((this.filterGeography) && (this.filterPolicyFocusArea)){
         this.showInitialState = 0;
-        this.showByYearAndTopicAreaAndKeyword = 0;
-        this.showByTopicAreaAndKeyword = 0;
-        this.showByYearAndKeyword = 0;
-        this.showByYearAndTopicArea = 1;
-        this.showByYear = 0;
-        this.showByTopicArea = 0;
+        this.showByGeographyAndPolicyFocusAreaAndKeyword = 0;
+        this.showByPolicyFocusAreaAndKeyword = 0;
+        this.showByGeographyAndKeyword = 0;
+        this.showByGeographyAndPolicyFocusArea = 1;
+        this.showByGeography = 0;
+        this.showByPolicyFocusArea = 0;
         this.showByKeywords = 0;
       }
-      else if ((this.filterYear > 1990) && (this.filterYear < 2020)){
+      else if (this.filterGeography){
         this.showInitialState = 0;
-        this.showByYearAndTopicAreaAndKeyword = 0;
-        this.showByTopicAreaAndKeyword = 0;
-        this.showByYearAndKeyword = 0;
-        this.showByYearAndTopicArea = 0;
-        this.showByYear = 1;
-        this.showByTopicArea = 0;
+        this.showByGeographyAndPolicyFocusAreaAndKeyword = 0;
+        this.showByPolicyFocusAreaAndKeyword = 0;
+        this.showByGeographyAndKeyword = 0;
+        this.showByGeographyAndPolicyFocusArea = 0;
+        this.showByGeography = 1;
+        this.showByPolicyFocusArea = 0;
         this.showByKeywords = 0;
       }
-      else if (this.filterTopicArea){
+      else if (this.filterPolicyFocusArea){
         this.showInitialState = 0;
-        this.showByYearAndTopicAreaAndKeyword = 0;
-        this.showByTopicAreaAndKeyword = 0;
-        this.showByYearAndKeyword = 0;
-        this.showByYearAndTopicArea = 0;
-        this.showByYear = 0;
-        this.showByTopicArea = 1;
+        this.showByGeographyAndPolicyFocusAreaAndKeyword = 0;
+        this.showByPolicyFocusAreaAndKeyword = 0;
+        this.showByGeographyAndKeyword = 0;
+        this.showByGeographyAndPolicyFocusArea = 0;
+        this.showByGeography = 0;
+        this.showByPolicyFocusArea = 1;
         this.showByKeywords = 0;
       }
       else if (this.filterKeywords){
         this.showInitialState = 0;
-        this.showByYearAndTopicAreaAndKeyword = 0;
-        this.showByTopicAreaAndKeyword = 0;
-        this.showByYearAndKeyword = 0;
-        this.showByYearAndTopicArea = 0;
-        this.showByYear = 0;
-        this.showByTopicArea = 0;
+        this.showByGeographyAndPolicyFocusAreaAndKeyword = 0;
+        this.showByPolicyFocusAreaAndKeyword = 0;
+        this.showByGeographyAndKeyword = 0;
+        this.showByGeographyAndPolicyFocusArea = 0;
+        this.showByGeography = 0;
+        this.showByPolicyFocusArea = 0;
         this.showByKeywords = 1;
       }
     };
@@ -134,9 +134,13 @@
       this.filter = "keywords";
       this.keywords = newValue;
     };
+    this.setGeography = function(newValue){
+      this.filter = "geography";
+      this.geography = newValue;
+    };
     this.setKeywords = function(newValue){
-      this.filter = "topicArea";
-      this.topicArea = newValue;
+      this.filter = "PolicyFocusArea";
+      this.PolicyFocusArea = newValue;
     };
     this.setPopular = function(){ //list by most views
       this.filter = "popular";
