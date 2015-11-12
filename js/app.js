@@ -8,7 +8,7 @@
   app.controller('ArchiveController', ['$http','$scope','$location', function($http,$scope,$location){
      var archive = this;
      archive.publications = [ ];
-     $http.get('/jgc-web4/js/pubs2.json').success(function(data){
+     $http.get('/js/pubs2.json').success(function(data){
        archive.publications = data;
      });
   
@@ -32,7 +32,7 @@
     this.resetAll();
 
     this.search = function(){
-      if ((this.filterGeography > 1990) && (this.filterPolicyFocusArea) && (this.filterKeywords)){
+      if ((this.filterGeography) && (this.filterPolicyFocusArea) && (this.filterKeywords)){
         this.showInitialState = 0;
         this.showByGeographyAndPolicyFocusAreaAndKeyword = 1;
         this.showByPolicyFocusAreaAndKeyword = 0;

@@ -152,10 +152,11 @@ var __adobewebfontsappname__ = "muse";
       <ul>
         <span class="publications-lead">Publications by geography, policy focus area and keywords</span>
         <p>&nbsp;</p> 
-        <li ng-repeat="publication in archive.publications | filter:{Geography:archive.filterGeography,PolicyFocusArea:archive.filterPolicyFocusArea,Keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
+        <li ng-repeat="publication in archive.publications | filter:{Geography:archive.filterGeography,PolicyFocusArea:archive.filterPolicyFocusArea,Keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:10">
           <blockquote class="publication">
-            <strong class="publications-year">{{publication.year}} </strong>
+            <a target="_self" href="/publications/{{publication.FilePath}}.html">
             {{publication.Title}} <!--JBB use target="_self" on links to work with angular-->
+            </a>
           </blockquote>
         </li>
       </ul>
@@ -164,10 +165,11 @@ var __adobewebfontsappname__ = "muse";
       <ul>
         <span class="publicatins-lead">Publications by policy focus area and keywords</span>
         <p>&nbsp;</p> 
-        <li ng-repeat="publication in archive.publications | filter:{PolicyFocusArea:archive.filterPolicyFocusArea,Keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
+        <li ng-repeat="publication in archive.publications | filter:{PolicyFocusArea:archive.filterPolicyFocusArea,Keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:10">
           <blockquote class="publication">
-            <strong class="publications-year">{{publication.year}} </strong>
-            {{publication.Title}}
+            <a target="_self" href="/publications/{{publication.FilePath}}.html">
+            {{publication.Title}} <!--JBB use target="_self" on links to work with angular-->
+            </a>
           </blockquote>
         </li>
       </ul>
@@ -176,10 +178,11 @@ var __adobewebfontsappname__ = "muse";
       <ul>
         <span class="publications-lead">Publications by geography and keywords</span>
         <p>&nbsp;</p> 
-        <li ng-repeat="publication in archive.publications | filter:{Geography:archive.filterGeography,Keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:3">
+        <li ng-repeat="publication in archive.publications | filter:{Geography:archive.filterGeography,Keywords:archive.filterKeywords} | orderBy:'-year' | limitTo:10">
           <blockquote class="publication">
-            <strong class="publications-year">{{publication.year}} </strong>
-            {{publication.Title}}
+            <a target="_self" href="/publications/{{publication.FilePath}}.html">
+            {{publication.Title}} <!--JBB use target="_self" on links to work with angular-->
+            </a>
           </blockquote>
         </li>
       </ul>
@@ -188,10 +191,11 @@ var __adobewebfontsappname__ = "muse";
       <ul>
         <span class="publications-lead">Publications by geography and policy focus area</span>
         <p>&nbsp;</p> 
-        <li ng-repeat="publication in archive.publications | filter:{Geography:archive.filterGeography,PolicyFocusArea:archive.filterPolicyFocusArea} | orderBy:'-year' | limitTo:3">
+        <li ng-repeat="publication in archive.publications | filter:{Geography:archive.filterGeography,PolicyFocusArea:archive.filterPolicyFocusArea} | orderBy:'-year' | limitTo:10">
           <blockquote class="publication">
-            <strong class="publications-year">{{publication.year}} </strong>
-            {{publication.Title}}
+            <a target="_self" href="/publications/{{publication.FilePath}}.html">
+            {{publication.Title}} <!--JBB use target="_self" on links to work with angular-->
+            </a>
           </blockquote>
         </li>
       </ul>
@@ -200,10 +204,11 @@ var __adobewebfontsappname__ = "muse";
       <ul>
         <span class="publications-lead">Publications by geography</span>
         <p>&nbsp;</p> 
-        <li ng-repeat="publication in archive.publications | filter:archive.filterGeography | orderBy:'-year' | limitTo:3">
+        <li ng-repeat="publication in archive.publications | filter:archive.filterGeography | orderBy:'-year' | limitTo:10">
           <blockquote class="publication">
-            <strong class="publications-year">{{publication.year}} </strong>
-            {{publication.Title}}
+            <a target="_self" href="/publications/{{publication.FilePath}}.html">
+            {{publication.Title}} <!--JBB use target="_self" on links to work with angular-->
+            </a>
           </blockquote>
           <br>
         </li>
@@ -213,10 +218,11 @@ var __adobewebfontsappname__ = "muse";
       <ul>
         <span class="publications-lead">Publications by policy focus area</span>
         <p>&nbsp;</p> 
-        <li ng-repeat="publication in archive.publications | filter:archive.filterPolicyFocusArea | limitTo:3">
+        <li ng-repeat="publication in archive.publications | filter:archive.filterPolicyFocusArea | limitTo:10">
           <blockquote class="publication">
-            <strong class="publications-year">{{publication.year}} </strong>
-            {{publication.Title}}
+            <a target="_self" href="/publications/{{publication.FilePath}}.html">
+            {{publication.Title}} <!--JBB use target="_self" on links to work with angular-->
+            </a>
           </blockquote>
         </li>
       </ul>
@@ -225,10 +231,11 @@ var __adobewebfontsappname__ = "muse";
       <ul>
         <span class="publications-lead">Publications by keyword</span>
         <p>&nbsp;</p> 
-        <li ng-repeat="publication in archive.publications | filter:archive.filterKeywords | limitTo:3">
+        <li ng-repeat="publication in archive.publications | filter:archive.filterKeywords | limitTo:10">
           <blockquote class="publication">
-            <strong class="publications-year">{{publication.year}} </strong>
-            {{publication.Title}}
+            <a target="_self" href="/publications/{{publication.FilePath}}.html">
+            {{publication.Title}} <!--JBB use target="_self" on links to work with angular-->
+            </a>
           </blockquote>
         </li>
       </ul>
